@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="productList">
+        <thead>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Quantity</td>
+        </thead>
+        <tbody id="productListBody">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    fetch('http://localhost:8080/api/v1/products').then(res => {
+        res.json().then(data => {
+            let stringBuilder = '';
+            data.forEach(element => {
+                stringBuilder += `<tr><td>${element.name}</td><td>${element.price}</td><td>${element.quantity}</td></tr>`
+            });
+            document.getElementById('productListBody').innerHTML = stringBuilder;
+        })
+    })
+</script>
+</html>
