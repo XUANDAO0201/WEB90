@@ -2,6 +2,8 @@ import express from "express";
 import { connectToMongoDb } from "./databases/mongodb.js";
 import router from "./routers/router.js";
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 connectToMongoDb();
 
 const app = express();

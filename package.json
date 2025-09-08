@@ -10,11 +10,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "env": "^0.0.2",
     "express": "^5.1.0",
-    "mongoose": "^8.17.2"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.2",
+    "multer": "^2.0.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19"
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/jsonwebtoken": "^9.0.10"
   }
 }
